@@ -6,7 +6,7 @@
 <center>
 
   ![](./../../images/ccm/01.png)<br>
-  \\( \text{Figure 1} \\)
+  \\( \small{Figure 1} \\)
 
 </center>
 
@@ -28,4 +28,3 @@ The `vngcloud-controller-manager` utilizes Kubernetes annotations to define load
 |3|`vks.vngcloud.vn/package-id`|The ID of the network load-balancer package to be used for the service. If this annotation is not specified, the default package will be used. This field is **ignored** when the `vks.vngcloud.vn/load-balancer-id` field is provided. |- Default: `lbp-847d4d84-bc1b-4c42-b0ee-c6bc5dd83d2a` _(`VNG NLB_Small`)_.|
 |4|`vks.vngcloud.vn/enable-secgroup-default`|Specify whether to attach the `Default` security group to the members of this load balancer.|- Default: `true`.|
 |5|`vks.vngcloud.vn/idle-timeout-client`|Connection idle timeout is the maximum time a connection can remain open without any data transfer, after which the load balancer will close the connection. Range:  \\( 1 \Rightarrow 3600 \\).|- Default: `50`.|
-
