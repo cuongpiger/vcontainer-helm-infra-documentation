@@ -20,6 +20,7 @@ The `vngcloud-controller-manager` is a powerful Kubernetes plugin designed to st
 
 # The plugin's annotations
 The `vngcloud-controller-manager` utilizes Kubernetes annotations to define load balancer configurations. Below is a list of annotations that you can use to customize your load balancer settings in the Kubernetes `Service` manifest.
+
 |#|Annotation|Description|Default/Example|
 |-|-|-|-|
 |1|`vks.vngcloud.vn/load-balancer-id`|The ID of the load balancer to be used for the service. If this annotation is not specified, a new load balancer will be created for the service.|- Default is empty.<br>- E.g: `lb-67cd0bbc-4c27-xxxx-xxxx-9f416a509577`.|
