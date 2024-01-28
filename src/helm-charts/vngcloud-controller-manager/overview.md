@@ -6,7 +6,7 @@
 <center>
 
   ![](./../../images/ccm/01.png)<br>
-  _\\( \text{Figure 1} \\)_
+  \\( \text{Figure 1} \\)
 
 </center>
 
