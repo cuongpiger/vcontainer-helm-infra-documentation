@@ -17,6 +17,7 @@ These **Helm charts** seamlessly integrate with the infrastructure and services 
 |#|Chart name|Description|Artifact/Github repository|
 |-|-|-|-|
 |1|[`vcontainer-storage-interface`](./helm-charts/vcontainer-storage-interface/index.md)|Provides `PersistentVolume` for **vContainer Kubernetes clusters**.|- **Artifact**: [https://artifacthub.io/packages/helm/vcontainer-helm-infra/vcontainer-storage-interface](https://artifacthub.io/packages/helm/vcontainer-helm-infra/vcontainer-storage-interface)<br>- **GitHub**: [https://github.com/vngcloud/vcontainer-storage-interface](https://github.com/vngcloud/vcontainer-storage-interface)|
+|2|[`vngcloud-controller-manager`](./helm-charts/vngcloud-controller-manager/index.md)|Efficient **Network Load Balancer _(L4 Load Balancer)_** management for Kubernetes clusters.|- **Artifact**: [https://artifacthub.io/packages/helm/vcontainer-helm-infra/vngcloud-controller-manager](https://artifacthub.io/packages/helm/vcontainer-helm-infra/vngcloud-controller-manager)<br>- **GitHub**: [https://github.com/vngcloud/vngcloud-controller-manager](https://github.com/vngcloud/vngcloud-controller-manager)|
 
 # Installation
 ## Prerequisites
