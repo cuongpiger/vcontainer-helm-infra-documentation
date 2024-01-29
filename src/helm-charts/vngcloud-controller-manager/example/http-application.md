@@ -71,7 +71,17 @@ kubectl apply -f http-application.yaml
 
   ![](./../../../images/ccm/38.png)
   ![](./../../../images/ccm/39.png)
-  \\( \small{Monitor \space \space details} \\)
+  \\( \small{Monitor \space \space details} \\)<br>
+
+</center>
+
+```bash
+kubectl get pods,svc -owide
+```
+
+<center>
+
+  ![](./../../../images/ccm/41.png)
 
 </center>
 
