@@ -2,3 +2,4 @@
 
 
 # For usage
+- [Internal LoadBalancer](example/internal-loadbalancer.md)

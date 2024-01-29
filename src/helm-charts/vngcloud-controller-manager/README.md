@@ -5,3 +5,4 @@
 - [Overview](overview.md)
 - [Installation](installation.md)
 - [For usage](example.md)
+  - [Internal LoadBalancer](example/internal-loadbalancer.md)
