@@ -87,13 +87,13 @@ Wait for the load balancer to be created successfully, users can check the statu
 
 <center>
 
-  ![](./../../../images/ccm/17.png)
+  ![](./../../../images/ccm/17.1.png)
   \\( \small{Listeners \space \space information} \\)<br>
 
-  ![](./../../../images/ccm/18.png)
+  ![](./../../../images/ccm/18.1.png)
   \\( \small{Pools \space \space information} \\)<br>
   
-  ![](./../../../images/ccm/19.png)
+  ![](./../../../images/ccm/19.1.png)
   \\( \small{Members \space \space information} \\)
 
 </center>
@@ -135,7 +135,7 @@ Make GET request to the internal IP address of the load balancer, you can get th
 
 <center>
 
-  ![](./../../../images/ccm/22.png)
+  ![](./../../../images/ccm/22.1.png)
 
 </center>
 
