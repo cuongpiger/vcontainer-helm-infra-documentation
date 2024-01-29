@@ -25,7 +25,7 @@ Key Steps:
 Deploy your Apache HTTP Server with the provided manifest. This service will be accessible via the internal load balancer on port 8080.
 
 ***File [internal-loadbalancer.yaml](https://raw.githubusercontent.com/vngcloud/vcontainer-helm-infra-documentation/main/manifests/internal-lb/internal-loadbalancer.yaml)***
-```bash
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -95,5 +95,95 @@ Wait for the load balancer to be created successfully, users can check the statu
   
   ![](./../../../images/ccm/19.png)
   \\( \small{Members \space \space information} \\)
+
+</center>
+
+Spin up an Ubuntu Pod to verify and test the internal load balancer using file [ubuntu-pod.yaml]().
+```bash
+cat <<EOF | kubectl apply -f-
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-pod
+spec:
+  hostNetwork: true
+  containers:
+  - name: ubuntu-container
+    image: ubuntu:latest
+    command: ["sleep", "infinity"]
+EOF
+```
+
+<center>
+
+  ![](./../../../images/ccm/20.png)
+
+</center>
+
+Verify the necessary resources are created successfully:
+```bash
+kubectl get pods -owide
+```
+
+<center>
+
+  ![](./../../../images/ccm/21.png)
+
+</center>
+
+Make GET request to the internal IP address of the load balancer, you can get the internal IP address of the load balancer by accessing the [Load Balancer dashboard](https://hcm-3.console.vngcloud.vn/vserver/load-balancer/vlb) on the VNG CLOUD portal:
+
+<center>
+
+  ![](./../../../images/ccm/22.png)
+
+</center>
+
+or by executing the following command:
+```bash
+kubectl get svc -owide
+```
+
+<center>
+
+  ![](./../../../images/ccm/24.png)
+
+</center>
+
+```bash
+kubectl exec -it ubuntu-pod -- bash 
+
+# inside the ubuntu-pod
+apt update && apt install curl -y
+curl http://<INTERNAL_LOADBALANCER_IP>:8080
+```
+
+<center>
+
+  ![](./../../../images/ccm/23.png)
+
+</center>
+
+Now, you can clean up the resources created in this lab by executing the following command:
+```bash
+kubectl delete pod ubuntu-pod --force
+kubectl delete -f internal-loadbalancer.yaml
+```
+
+<center>
+
+  ![](./../../../images/ccm/25.png)
+
+</center>
+
+Verify the resources are deleted successfully:
+```bash
+kubectl get pods -owide
+kubectl get svc -owide
+```
+
+<center>
+
+  ![](./../../../images/ccm/26.png)
 
 </center>
