@@ -10,3 +10,4 @@
   - [Support UDP protocol](example/upd-server.md)
   - [HTTP Application](example/http-application.md)
   - [Reuse existing LoadBalancer](example/reuse-loadbalancer.md)
+  - [Nginx Ingress](example/nginx-ingress.md)
