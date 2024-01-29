@@ -16,3 +16,4 @@
   - [Installation](helm-charts/vngcloud-controller-manager/installation.md)
   - [For usage](helm-charts/vngcloud-controller-manager/example.md)
     - [Internal LoadBalancer](helm-charts/vngcloud-controller-manager/example/internal-loadbalancer.md)
+    - [External LoadBalancer](helm-charts/vngcloud-controller-manager/example/external-loadbalancer.md)

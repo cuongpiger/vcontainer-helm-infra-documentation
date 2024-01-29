@@ -6,3 +6,4 @@
 - [Installation](installation.md)
 - [For usage](example.md)
   - [Internal LoadBalancer](example/internal-loadbalancer.md)
+  - [External LoadBalancer](example/external-loadbalancer.md)

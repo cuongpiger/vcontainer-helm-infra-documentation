@@ -3,3 +3,4 @@
 
 # For usage
 - [Internal LoadBalancer](example/internal-loadbalancer.md)
+- [External LoadBalancer](example/external-loadbalancer.md)
