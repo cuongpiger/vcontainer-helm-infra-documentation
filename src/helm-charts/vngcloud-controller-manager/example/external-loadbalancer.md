@@ -71,6 +71,6 @@ Access the service via the external IP address of the load balancer.
 
 <center>
 
-  ![](./../../../images/ccm/30.png)
+  ![](./../../../images/ccm/30.1.png)
 
 </center>
