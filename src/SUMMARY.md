@@ -17,3 +17,4 @@
   - [For usage](helm-charts/vngcloud-controller-manager/example.md)
     - [Internal LoadBalancer](helm-charts/vngcloud-controller-manager/example/internal-loadbalancer.md)
     - [External LoadBalancer](helm-charts/vngcloud-controller-manager/example/external-loadbalancer.md)
+    - [Support UDP protocol](helm-charts/vngcloud-controller-manager/example/upd-server.md)

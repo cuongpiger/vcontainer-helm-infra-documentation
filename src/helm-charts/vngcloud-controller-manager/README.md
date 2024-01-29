@@ -7,3 +7,4 @@
 - [For usage](example.md)
   - [Internal LoadBalancer](example/internal-loadbalancer.md)
   - [External LoadBalancer](example/external-loadbalancer.md)
+  - [Support UDP protocol](example/upd-server.md)
