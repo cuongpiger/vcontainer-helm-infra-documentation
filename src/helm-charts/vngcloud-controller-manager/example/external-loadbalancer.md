@@ -197,10 +197,12 @@ kubectl apply -f traefik-internet-facing.yaml
 <center>
 
   ![](./../../../images/ccm/31.png)
+  \\( \small{Apply \space \space manifest} \\)<br>
+
   ![](./../../../images/ccm/32.png)
   \\( \small{Traefik \space \space service \space \space listeners} \\)<br>
 
   ![](./../../../images/ccm/33.png)
   \\( \small{Traefik \space \space dashboard} \\)
-  
+
 </center>
