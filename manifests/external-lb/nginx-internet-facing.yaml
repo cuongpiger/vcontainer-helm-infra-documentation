@@ -1,0 +1,43 @@
+####################################################################################################
+# Author: Cuong. Duong Manh <cuongdm3@vng.com.vn>
+# Description:
+#   - Create an Nginx deployment with 2 replicas, expose it as a service with type LoadBalancer using
+#     the vngcloud-controller-manager plugin
+#   - The service will be exposed on port 80 on the EXTERNAL L4 load balancer
+####################################################################################################
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-http-nginx-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: external-http-nginx-service
+  annotations:
+    vks.vngcloud.vn/load-balancer-name: "my-nginx-service"
+    vks.vngcloud.vn/package-id: "lbp-ddbf9313-3f4c-471b-afd5-f6a3305159fc"
+spec:
+  selector:
+    app: nginx
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
