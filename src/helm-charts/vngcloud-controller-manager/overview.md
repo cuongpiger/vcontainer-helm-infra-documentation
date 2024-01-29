@@ -79,3 +79,13 @@ cloudConfig:
 
 # ... other configurations
 ```
+
+## LoadBalancer Packages
+The `vngcloud-controller-manager` supports multiple load balancer packages, each with its own set of specifications. Users can access the [LoadBalancer packages dashboard](https://hcm-3.console.vngcloud.vn/vserver/load-balancer/package) to view the available packages and their corresponding specifications. The following table lists the available packages and their corresponding specifications.
+
+<center>
+
+  ![](./../../images/ccm/14.png)
+  \\( \small{Figure 2} \\)
+
+</center>
