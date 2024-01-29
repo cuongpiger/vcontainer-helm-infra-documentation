@@ -6,4 +6,4 @@
 - [External LoadBalancer](example/external-loadbalancer.md)
 - [Support UDP protocol](example/upd-server.md)
 - [HTTP Application](example/http-application.md)
-- [Reuse existing LoadBalancer](example/reuse-existing-loadbalancer.md)
+- [Reuse existing LoadBalancer](example/reuse-loadbalancer.md)
