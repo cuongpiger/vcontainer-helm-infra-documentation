@@ -202,4 +202,5 @@ kubectl apply -f traefik-internet-facing.yaml
 
   ![](./../../../images/ccm/33.png)
   \\( \small{Traefik \space \space dashboard} \\)
+  
 </center>
