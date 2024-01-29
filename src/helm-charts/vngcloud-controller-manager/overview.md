@@ -43,3 +43,39 @@ The `vngcloud-controller-manager` utilizes Kubernetes annotations to define load
 |18|`vks.vngcloud.vn/monitor-http-success-code`|Define the HTTP status code that indicates a successful health check. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https`.|- Default: `200`.|
 |19|`vks.vngcloud.vn/monitor-http-version`|Define the HTTP version used for sending health check requests to the backend servers. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https`. Acceptable values include `1.0`, and `1.1`.|- Default: `1.0`.|
 |20|`vks.vngcloud.vn/monitor-http-domain-name`|The domain name, which be injected into the HTTP Host Header to the backend server for HTTP health check. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https` and the `vks.vngcloud.vn/monitor-http-version` field is `1.1`.|- Default: `nip.io`.|
+
+
+The aforementioned fields **CAN** be configured using the default `values.yaml` file in **Helm**, eliminating the need for manual configuration in each Kubernetes service manifest's annotations.
+
+***File [values.yaml](https://artifacthub.io/packages/helm/vcontainer-helm-infra/vngcloud-controller-manager?modal=values)***
+```yaml=
+# ... other configurations
+
+# These will be used to create loadbalancer, listener, pool, monitor and member resources
+cloudConfig:
+  global:
+    identityURL: "https://iamapis.vngcloud.vn/accounts-api"
+    vserverURL: "https://hcm-3.api.vngcloud.vn/vserver"
+    clientID: "<PUT_YOUR_CLIENT_ID>"
+    clientSecret: "<PUT_YOUR_CLIENT_SECRET>"
+
+  vlb:
+    defaultL4PackageID: "lbp-96b6b072-aadb-4b58-9d5f-c16ad69d36aa"   # vks.vngcloud.vn/package-id
+    defaultListenerAllowedCIRDs: "0.0.0.0/0"                         # vks.vngcloud.vn/listener-allowed-cidrs
+    defaultIdleTimeoutClient: 50                                     # vks.vngcloud.vn/idle-timeout-client
+    defaultIdleTimeoutMember: 50                                     # vks.vngcloud.vn/idle-timeout-member
+    defaultIdleTimeoutConnection: 5                                  # vks.vngcloud.vn/idle-timeout-connection
+    defaultPoolAlgorithm: "round-robin"                              # vks.vngcloud.vn/pool-algorithm
+    defaultMonitorHealthyThreshold: 3                                # vks.vngcloud.vn/monitor-healthy-threshold
+    defaultMonitorUnhealthyThreshold: 3                              # vks.vngcloud.vn/monitor-unhealthy-threshold
+    defaultMonitorTimeout: 5                                         # vks.vngcloud.vn/monitor-timeout
+    defaultMonitorInterval: 50                                       # vks.vngcloud.vn/monitor-interval
+    defaultMonitorHttpMethod: "get"                                  # vks.vngcloud.vn/monitor-http-method
+    defaultMonitorHttpPath: "/"                                      # vks.vngcloud.vn/monitor-http-path
+    defaultMonitorHttpSuccessCode: "200"                             # vks.vngcloud.vn/monitor-http-success-code
+    defaultMonitorHttpVersion: "1.0"                                 # vks.vngcloud.vn/monitor-http-version
+    defaultMonitorHttpDomainName: ""                                 # vks.vngcloud.vn/monitor-http-domain-name
+    defaultMonitorProtocol: "tcp"                                    # vks.vngcloud.vn/monitor-protocol
+
+# ... other configurations
+```
