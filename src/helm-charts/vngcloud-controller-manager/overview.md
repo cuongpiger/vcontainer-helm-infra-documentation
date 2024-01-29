@@ -37,7 +37,7 @@ The `vngcloud-controller-manager` utilizes Kubernetes annotations to define load
 |12|`vks.vngcloud.vn/monitor-unhealthy-threshold`|The number of consecutive failed health checks before it is considered as unhealthy pool.| - Default: `3`.|
 |13|`vks.vngcloud.vn/monitor-timeout`|The maximum time will wait for a response from a pool member before considering it a failed health check.|- Default: `5`.|
 |14|`vks.vngcloud.vn/monitor-interval`|The period of time between successive health checks performed by an individual pool in seconds.|- Default: `30`.|
-|15|`vks.vngcloud.vn/monitor-protocol`|The type of health monitor. Possible values: `tcp`, `http`, and `https`.|- Default: `tcp`.|
+|15|`vks.vngcloud.vn/monitor-protocol`|The type of health monitor. Possible values: `tcp`, `ping-udp`, `http`, and `https`.|- Default: `tcp`.|
 |16|`vks.vngcloud.vn/monitor-http-method`|Define the HTTP method used for sending health check requests to the backend servers. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https`. Acceptable values include `get`, `post`, and `put`.| - Default: `get`.|
 |17|`vks.vngcloud.vn/monitor-http-path`|Use the default path of `/` to ping the root, or specify a custom path if preferred. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https`.| - Default: `/`.|
 |18|`vks.vngcloud.vn/monitor-http-success-code`|Define the HTTP status code that indicates a successful health check. This option is applicable only when the `vks.vngcloud.vn/monitor-protocol` is set to `http` or `https`.|- Default: `200`.|

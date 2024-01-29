@@ -24,7 +24,7 @@ Key Steps:
 ## Get Started
 Deploy your Apache HTTP Server with the provided manifest. This service will be accessible via the internal load balancer on port 8080.
 
-***File [internal-loadbalancer.yaml](adasas)***
+***File [internal-loadbalancer.yaml](https://raw.githubusercontent.com/vngcloud/vcontainer-helm-infra-documentation/main/manifests/internal-lb/internal-loadbalancer.yaml)***
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -63,3 +63,37 @@ spec:
       port: 8080                                    # CAN be accessed via this port with other service in the same VPC
       targetPort: 80
 ```
+
+Apply the [internal-loadbalancer.yaml](https://raw.githubusercontent.com/vngcloud/vcontainer-helm-infra-documentation/main/manifests/internal-lb/internal-loadbalancer.yaml) manifest:
+```bash
+kubectl apply -f internal-loadbalancer.yaml
+```
+
+<center>
+
+  ![](./../../../images/ccm/15.png)
+
+</center>
+
+Users can follow the progress of this load balancer is being created by access the [Load Balancer dashboard](https://hcm-3.console.vngcloud.vn/vserver/load-balancer/vlb) on the VNG CLOUD portal:
+
+<center>
+
+  ![](./../../../images/ccm/16.png)
+
+</center>
+
+Wait for the load balancer to be created successfully, users can check the status of loadbalancer, listeners, pools, and its members.
+
+<center>
+
+  ![](./../../../images/ccm/17.png)
+  \\( \small{Listeners information} \\)<br>
+
+  ![](./../../../images/ccm/18.png)
+  \\( \small{Pools information} \\)<br>
+  
+  ![](./../../../images/ccm/19.png)
+  \\( \small{Members information} \\)
+
+</center>
