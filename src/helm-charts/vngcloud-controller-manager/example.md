@@ -5,3 +5,4 @@
 - [Internal LoadBalancer](example/internal-loadbalancer.md)
 - [External LoadBalancer](example/external-loadbalancer.md)
 - [Support UDP protocol](example/upd-server.md)
+- [HTTP Application](example/http-application.md)
