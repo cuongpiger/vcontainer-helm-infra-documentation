@@ -6,7 +6,7 @@
 <center>
 
   ![](./../../images/ccm/01.png)<br>
-  \\( \small{Figure 1} \\)
+  \\( \small{Figure \space \space 1} \\)
 
 </center>
 
@@ -86,6 +86,6 @@ The `vngcloud-controller-manager` supports multiple load balancer packages, each
 <center>
 
   ![](./../../images/ccm/14.png)
-  \\( \small{Figure 2} \\)
+  \\( \small{Figure \space \space 2} \\)
 
 </center>

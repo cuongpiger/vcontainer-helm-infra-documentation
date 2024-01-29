@@ -88,12 +88,12 @@ Wait for the load balancer to be created successfully, users can check the statu
 <center>
 
   ![](./../../../images/ccm/17.png)
-  \\( \small{Listeners information} \\)<br>
+  \\( \small{Listeners \space \space information} \\)<br>
 
   ![](./../../../images/ccm/18.png)
-  \\( \small{Pools information} \\)<br>
+  \\( \small{Pools \space \space information} \\)<br>
   
   ![](./../../../images/ccm/19.png)
-  \\( \small{Members information} \\)
+  \\( \small{Members \space \space information} \\)
 
 </center>
