@@ -14,3 +14,4 @@
 - [VNG Cloud Controller Manager Chart](helm-charts/vngcloud-controller-manager/README.md)
   - [Overview](helm-charts/vngcloud-controller-manager/overview.md)
   - [Installation](helm-charts/vngcloud-controller-manager/installation.md)
+  - [For usage](helm-charts/vngcloud-controller-manager/example.md)
