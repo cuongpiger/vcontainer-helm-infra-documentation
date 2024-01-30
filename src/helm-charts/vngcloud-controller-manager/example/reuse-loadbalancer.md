@@ -15,7 +15,7 @@ The [reuse-loadbalancer.yaml]() manifest orchestrates the deployment and exposur
   - Exposes port `8000` using the **TCP protocol** and directs traffic to the Apache HTTP Server container's port `80`.
 
 > ⚠️ **IMPORTANT**:
-> - To reuse an existing loadbalancer, the resourceses **MUST** be in the same VPC.
+> - To reuse an existing loadbalancer, the resourceses **MUST** be in the same **SUBNET**.
 
 ***File [reuse-loadbalancer.yaml]()***
 ```yaml
