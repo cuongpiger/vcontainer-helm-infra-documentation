@@ -21,3 +21,4 @@
     - [HTTP Application](helm-charts/vngcloud-controller-manager/example/http-application.md)
     - [Reuse existing LoadBalancer](helm-charts/vngcloud-controller-manager/example/reuse-loadbalancer.md)
     - [Nginx Ingress](helm-charts/vngcloud-controller-manager/example/nginx-ingress.md)
+    - [Change LoadBalancer package](helm-charts/vngcloud-controller-manager/example/change-package.md)

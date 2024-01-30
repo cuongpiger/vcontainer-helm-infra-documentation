@@ -11,3 +11,4 @@
   - [HTTP Application](example/http-application.md)
   - [Reuse existing LoadBalancer](example/reuse-loadbalancer.md)
   - [Nginx Ingress](example/nginx-ingress.md)
+  - [Change LoadBalancer package](example/change-package.md)
